@@ -1,0 +1,15 @@
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\bin\Debug\net8.0\multiplicar.exe
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\bin\Debug\net8.0\multiplicar.deps.json
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\bin\Debug\net8.0\multiplicar.runtimeconfig.json
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\bin\Debug\net8.0\multiplicar.dll
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\bin\Debug\net8.0\multiplicar.pdb
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\multiplicar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\multiplicar.AssemblyInfoInputs.cache
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\multiplicar.AssemblyInfo.cs
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\multiplicar.csproj.CoreCompileInputs.cache
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\multiplicar.sourcelink.json
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\multiplicar.dll
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\refint\multiplicar.dll
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\multiplicar.pdb
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\multiplicar.genruntimeconfig.cache
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\Reto 40 - Tabla de multiplicar\multiplicar\multiplicar\obj\Debug\net8.0\ref\multiplicar.dll

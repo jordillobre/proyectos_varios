@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj": {}
+    "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\Reto 00 - El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj": {
+    "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\Reto 00 - El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj",
+        "projectUniqueName": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\Reto 00 - El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj",
         "projectName": "fizzbuzz",
-        "projectPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj",
+        "projectPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\Reto 00 - El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj",
         "packagesPath": "C:\\Users\\jordi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\obj\\",
+        "outputPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\Reto 00 - El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jordi\\AppData\\Roaming\\NuGet\\NuGet.Config"

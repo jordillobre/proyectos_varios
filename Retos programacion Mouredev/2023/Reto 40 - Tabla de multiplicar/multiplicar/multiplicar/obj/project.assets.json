@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj",
-      "projectName": "fizzbuzz",
-      "projectPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\fizzbuzz.csproj",
+      "projectUniqueName": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\Reto 40 - Tabla de multiplicar\\multiplicar\\multiplicar\\multiplicar.csproj",
+      "projectName": "multiplicar",
+      "projectPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\Reto 40 - Tabla de multiplicar\\multiplicar\\multiplicar\\multiplicar.csproj",
       "packagesPath": "C:\\Users\\jordi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\El famoso fizz buzz\\fizzbuzz\\fizzbuzz\\obj\\",
+      "outputPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\Reto 40 - Tabla de multiplicar\\multiplicar\\multiplicar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jordi\\AppData\\Roaming\\NuGet\\NuGet.Config"

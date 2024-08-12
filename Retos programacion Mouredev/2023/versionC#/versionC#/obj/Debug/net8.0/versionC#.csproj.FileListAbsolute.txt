@@ -1,0 +1,15 @@
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\bin\Debug\net8.0\versionC#.exe
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\bin\Debug\net8.0\versionC#.deps.json
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\bin\Debug\net8.0\versionC#.runtimeconfig.json
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\bin\Debug\net8.0\versionC#.dll
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\bin\Debug\net8.0\versionC#.pdb
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\versionC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\versionC#.AssemblyInfoInputs.cache
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\versionC#.AssemblyInfo.cs
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\versionC#.csproj.CoreCompileInputs.cache
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\versionC#.sourcelink.json
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\versionC#.dll
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\refint\versionC#.dll
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\versionC#.pdb
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\versionC#.genruntimeconfig.cache
+C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\obj\Debug\net8.0\ref\versionC#.dll

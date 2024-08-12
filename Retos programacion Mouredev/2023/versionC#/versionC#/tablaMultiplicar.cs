@@ -5,8 +5,6 @@
 //          1 x 3 = 3
 //          ... 
 
-using System;
-
 namespace multiplicar;
 public class Multiplicar{
     public static void EjecutarMultiplicar(){

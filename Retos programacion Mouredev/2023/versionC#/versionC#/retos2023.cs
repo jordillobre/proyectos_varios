@@ -1,11 +1,13 @@
 using fizzBuzz;
 using multiplicar;
 using tecladoT9;
+using hacker;
 
 class Program{
     static void Main(string[] args){
 
         string[] listRetos ={"Reto 00: El famoso fizz buzz",
+                            "Reto 01: El lenguaje hacker",
                             "Reto 30: El teclado T9",
                             "Reto 40: Tabla de multiplicar"};
 
@@ -21,8 +23,11 @@ class Program{
             int opcionSel = int.Parse(input);
 
             switch (opcionSel){
-                case 0:
+                case 00:
                     FizzBuzz.EjecutarFizzBuzz();
+                    break;
+                case 01:
+                    Hacker.EjecutarHacker();
                     break;
                 case 30:
                     TecladoT9.EjecutarTecladoT9();

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = versionC_
-build_property.ProjectDir = C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\2023\versionC#\versionC#\
+build_property.ProjectDir = C:\Users\jordi\Proyectos\programación\proyectos_varios\Retos programacion Mouredev\versionC#\versionC#\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,3 +1,10 @@
+# Crea un conversor entre grados Celsius y Fahrenheit. 
+
+# https://github.com/mouredev/retos-programacion-mini/blob/main/Mini/05_celsius_fahrenheit.py
+
+
+
+
 import time
 
 def main():

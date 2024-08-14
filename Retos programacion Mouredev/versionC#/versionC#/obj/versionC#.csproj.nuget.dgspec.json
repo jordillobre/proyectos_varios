@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\versionC#\\versionC#\\versionC#.csproj": {}
+    "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\versionC#\\versionC#\\versionC#.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\versionC#\\versionC#\\versionC#.csproj": {
+    "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\versionC#\\versionC#\\versionC#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\versionC#\\versionC#\\versionC#.csproj",
+        "projectUniqueName": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\versionC#\\versionC#\\versionC#.csproj",
         "projectName": "versionC#",
-        "projectPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\versionC#\\versionC#\\versionC#.csproj",
+        "projectPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\versionC#\\versionC#\\versionC#.csproj",
         "packagesPath": "C:\\Users\\jordi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\2023\\versionC#\\versionC#\\obj\\",
+        "outputPath": "C:\\Users\\jordi\\Proyectos\\programación\\proyectos_varios\\Retos programacion Mouredev\\versionC#\\versionC#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jordi\\AppData\\Roaming\\NuGet\\NuGet.Config"

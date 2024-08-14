@@ -4,7 +4,6 @@
 //  - Múltiplos de 5 por la palabra "buzz".
 //  - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
 
-
 namespace fizzBuzz;
 public class FizzBuzz{
     public static void EjecutarFizzBuzz(){
@@ -21,6 +20,5 @@ public class FizzBuzz{
                 Console.WriteLine(num);
             }
         }   
-    
     }
 }

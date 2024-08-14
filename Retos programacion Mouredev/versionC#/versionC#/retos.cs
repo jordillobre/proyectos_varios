@@ -2,14 +2,16 @@ using fizzBuzz;
 using multiplicar;
 using tecladoT9;
 using hacker;
+using cuentaAtras;
 
 class Program{
     static void Main(string[] args){
 
-        string[] listRetos ={"Reto 00: El famoso fizz buzz",
-                            "Reto 01: El lenguaje hacker",
-                            "Reto 30: El teclado T9",
-                            "Reto 40: Tabla de multiplicar"};
+        string[] listRetos ={"Reto 01: El famoso fizz buzz",
+                            "Reto 02: El lenguaje hacker",
+                            "Reto 03: El teclado T9",
+                            "Reto 04: Tabla de multiplicar",
+                            "Reto 05: Cuenta atras"};
 
         for (int i=0; i< listRetos.Length; i++){
             Console.WriteLine(listRetos[i]);
@@ -23,17 +25,25 @@ class Program{
             int opcionSel = int.Parse(input);
 
             switch (opcionSel){
-                case 00:
+                case 01:
+                    Console.Clear();
                     FizzBuzz.EjecutarFizzBuzz();
                     break;
-                case 01:
+                case 02:
+                    Console.Clear();
                     Hacker.EjecutarHacker();
                     break;
-                case 30:
+                case 03:
+                    Console.Clear();
                     TecladoT9.EjecutarTecladoT9();
                     break;
-                case 40:
+                case 04:
+                    Console.Clear();
                     Multiplicar.EjecutarMultiplicar();
+                    break;
+                case 05:
+                    Console.Clear();
+                    CuentaAtras.EjecutarCuentaAtras();
                     break;
                 default:
                     Console.WriteLine("Opción no válida. Por favor, elige un número mostrado en la lista.");

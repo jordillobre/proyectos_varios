@@ -3,6 +3,7 @@ using multiplicar;
 using tecladoT9;
 using hacker;
 using cuentaAtras;
+using cifrado;
 
 class Program{
     static void Main(string[] args){
@@ -11,7 +12,8 @@ class Program{
                             "Reto 02: El lenguaje hacker",
                             "Reto 03: El teclado T9",
                             "Reto 04: Tabla de multiplicar",
-                            "Reto 05: Cuenta atras"};
+                            "Reto 05: Cuenta atras",
+                            "Reto 06: Cifrado César"};
 
         for (int i=0; i< listRetos.Length; i++){
             Console.WriteLine(listRetos[i]);
@@ -44,6 +46,10 @@ class Program{
                 case 05:
                     Console.Clear();
                     CuentaAtras.EjecutarCuentaAtras();
+                    break;
+                case 06:
+                    Console.Clear();
+                    cifradoCesar.ejecutarCifrado();
                     break;
                 default:
                     Console.WriteLine("Opción no válida. Por favor, elige un número mostrado en la lista.");

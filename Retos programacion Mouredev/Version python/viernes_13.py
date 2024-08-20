@@ -36,7 +36,7 @@ def main():
         except ValueError:
             print("Error: Debes introducir un número entero válido.")
     es_viernes = comprobar_viernes(mes, anyo)
-    print(f"¿El mes de {meses[mes - 1]} del año {anyo} tiene un viernes 13? {es_viernes}")
+    print(f"¿El mes de {meses[mes - 1]} del año {anyo} tiene un viernes 13? {'Sí' if es_viernes else 'No'}")
     time.sleep(5)
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 #conversión de distancias utilizando recursividad
+
 import time
 
 def calc_incremental(pos1, pos2, cantidad):

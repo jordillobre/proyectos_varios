@@ -5,7 +5,6 @@
 
 # https://github.com/mouredev/retos-programacion-2023/blob/main/Retos/Reto%20%2324%20-%20CIFRADO%20C%C3%89SAR%20%5BF%C3%A1cil%5D/ejercicio.md
 
-
 def cifrado():
     abecedario = "abcdefghijklmnopqrstuvwxyz"
     valor_correcto = True
@@ -34,7 +33,6 @@ def cifrado():
         except ValueError:
             print("Error: Debes introducir un número entero válido.")
 
-
     frase = frase.lower()
 
     for letra in frase:
@@ -51,6 +49,5 @@ def cifrado():
     print(f"La frase {frase}")
     print("Mediante la codificación César marcada seria:")
     print(resultado)
-
 
 cifrado()

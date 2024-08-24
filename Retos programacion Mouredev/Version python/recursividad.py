@@ -1,12 +1,10 @@
 # EJERCICIO:
 # Entiende el concepto de recursividad creando una función recursiva que imprima números del 100 al 0.
 
-
 # DIFICULTAD EXTRA (opcional):
 # Utiliza el concepto de recursividad para:
 # Calcular el factorial de un número concreto (la función recibe ese número).
 # Calcular el valor de un elemento concreto (según su posición) en la sucesión de Fibonacci (la función recibe la posición).
-
 
 # https://github.com/mouredev/roadmap-retos-programacion/blob/main/Roadmap/06%20-%20RECURSIVIDAD/ejercicio.md
 
@@ -19,14 +17,12 @@ def calcular_fibonacci(num : int) -> int:
     else:
         return (calcular_fibonacci(num -1) + (calcular_fibonacci(num-2)))
 
-
 def calc_factorial(num : int) -> int:
     if num == 1:
         return 1
     else:
         return num * calc_factorial(num - 1)
     
-
 def limpiar_consola():
     if platform.system() == "Windows":
         os.system('cls')

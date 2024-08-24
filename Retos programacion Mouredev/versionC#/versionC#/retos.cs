@@ -4,6 +4,7 @@ using tecladoT9;
 using hacker;
 using cuentaAtras;
 using cifrado;
+using recursividad;
 
 class Program{
     static void Main(string[] args){
@@ -13,12 +14,12 @@ class Program{
                             "Reto 03: El teclado T9",
                             "Reto 04: Tabla de multiplicar",
                             "Reto 05: Cuenta atras",
-                            "Reto 06: Cifrado César"};
+                            "Reto 06: Cifrado César",
+                            "Reto 07: Recursividad"};
 
         for (int i=0; i< listRetos.Length; i++){
             Console.WriteLine(listRetos[i]);
         }
-
 
         Console.WriteLine("¿Que reto quieres que se ejecute? ");
         string input = Console.ReadLine();
@@ -50,6 +51,10 @@ class Program{
                 case 06:
                     Console.Clear();
                     cifradoCesar.ejecutarCifrado();
+                    break;
+                case 07:
+                    Console.Clear();
+                    Recursividad.EjecutarRecursividad();
                     break;
                 default:
                     Console.WriteLine("Opción no válida. Por favor, elige un número mostrado en la lista.");

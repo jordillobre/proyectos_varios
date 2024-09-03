@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujando arcos</title>
+
+    <style>
+        canvas{
+            background-color: cyan;
+            border: solid yellow 3px;
+        }
+    </style>
+
+    <script>
+        window.onload=function(){
+            canvas = document.getElementById('canvas');
+            if(canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+                // comprobamos de que canvas existe en este navegador, es decir que lo soporte y que además pueda funcionar en 2 dimensiones
+
+                if(ctx){
+                    //estilos
+                    ctx.lineWidth = 10;
+                    ctx.strokeStyle = "yellow";
+                    ctx.fillStyle = "red";
+
+                    //arco
+                    ctx.beginPath();
+                    ctx.arc(100, 150, 50, 1.1*Math.PI, 1.9*Math.PI); //pos X, Pos Y, relleno de la circunferencia
+                    ctx.stroke();
+
+                    //arco
+                    ctx.beginPath();
+                    ctx.arc(250, 150, 50, 1.1*Math.PI, 1.9*Math.PI, true); //pos X, Pos Y, relleno de la circunferencia, sentido del arco
+                    ctx.stroke();
+
+                    //arco
+                    ctx.beginPath();
+                    ctx.arc(400, 150, 50, 0, 2*Math.PI);
+                    ctx.fill();
+                    ctx.stroke();
+                    
+
+                }else{
+                    alert("Este navegador no soporta la etiqueta canvas")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id = "canvas" width="600" height="400">
+
+    </canvas>
+</body>
+</html>

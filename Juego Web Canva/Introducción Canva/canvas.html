@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujando cuadrados</title>
+
+    <style>
+        canvas{
+            background-color: cyan;
+            border: solid yellow 3px;
+        }
+    </style>
+
+    <script>
+        window.onload=function(){
+            canvas = document.getElementById('canvas');
+            if(canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+                // comprobamos de que canvas existe en este navegador, es decir que lo soporte y que además pueda funcionar en 2 dimensiones
+
+                if(ctx){
+                    // definimos los colores para nuestros objetos
+                    ctx.fillStyle = "yellow";//color de relleno
+                    ctx.strokeStyle = "#ff0000";//para el color del marco
+                    ctx.lineWidth = 5; //ancho de la linea
+
+                    //generar el marco, tiene 4 parametros = x, y , ancho y alto (desde la esquina superior izquierda)
+                    ctx.fillRect(50, 50, 100, 100); //generamos un cuadrado
+                    ctx.strokeRect(50, 50, 100, 100); //generamos el marco
+
+                    //cambiar color de relleno
+                    ctx.fillStyle = "rgba(250,250,0,0.25)";
+                    ctx.fillRect(200, 50, 100, 100); //generamos un cuadrado
+                    ctx.strokeRect(200, 50, 100, 100); //generamos el marco
+
+                }else{
+                    alert("Este navegador no soporta la etiqueta canvas")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id = "canvas" width="600" height="400">
+
+    </canvas>
+</body>
+</html>

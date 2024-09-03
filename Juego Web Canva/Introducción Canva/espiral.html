@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujando una espiral</title>
+
+    <style>
+        canvas{
+            background-color: cyan;
+            border: solid yellow 3px;
+        }
+    </style>
+
+    <script>
+        window.onload=function(){
+            canvas = document.getElementById('canvas');
+            if(canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+                // comprobamos de que canvas existe en este navegador, es decir que lo soporte y que además pueda funcionar en 2 dimensiones
+
+                if(ctx){
+                    
+                    let radio = 0, angulo =0;
+
+                    ctx.lineWidth = 10;
+                    ctx.strokeStyle = "orange";
+                    ctx.beginPath();
+                    ctx.moveTo(canvas.width/2, canvas.height/2);
+
+                    for(i= 0; i < 200; i++){
+                        radio += 0.75;
+                        angulo += (Math.PI*2)/50;
+                        var x = canvas.width/2 + radio *Math.cos(angulo);
+                        var y = canvas.height/2 + radio *Math.sin(angulo);
+                        ctx.lineTo(x,y);
+                    }
+
+                    ctx.stroke();
+
+
+                }else{
+                    alert("Este navegador no soporta la etiqueta canvas")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id = "canvas" width="600" height="400">
+
+    </canvas>
+</body>
+</html>

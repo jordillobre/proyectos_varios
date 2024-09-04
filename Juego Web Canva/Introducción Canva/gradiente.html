@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando un gradiente</title>
+
+    <style>
+        canvas{
+            background-color: green;
+            border: solid yellow 3px;
+        }
+    </style>
+
+    <script>
+        window.onload=function(){
+            canvas = document.getElementById('canvas');
+            if(canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+                // comprobamos de que canvas existe en este navegador, es decir que lo soporte y que además pueda funcionar en 2 dimensiones
+
+                if(ctx){
+                    
+                    var gradiente = ctx.createLinearGradient(0, 0, canvas.width, 0);
+
+                    gradiente.addColorStop(0, "green");
+                    gradiente.addColorStop(0.4, "white");
+                    gradiente.addColorStop(0.6, "white");
+                    gradiente.addColorStop(1, "red");
+
+                    ctx.fillStyle = gradiente;
+                    ctx.fillRect(0,0, canvas.width, canvas.height);
+
+                }else{
+                    alert("Este navegador no soporta la etiqueta canvas")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id = "canvas" width="600" height="400">
+
+    </canvas>
+</body>
+</html>

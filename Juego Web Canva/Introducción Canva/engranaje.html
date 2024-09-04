@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujando un engranaje</title>
+
+    <style>
+        canvas {
+            background-color: green;
+            border: solid yellow 3px;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            const canvas = document.getElementById('canvas');
+            if (canvas && canvas.getContext) {
+                const ctx = canvas.getContext("2d");
+                
+                if (ctx) {
+                    // Centro del canvas
+                    const centroX = canvas.width / 2;
+                    const centroY = canvas.height / 2;
+
+                    // Definición de los radios del engranaje
+                    const radioInterno = 50;
+                    const radioExterno = 95;
+                    const numPuntos = 40;
+
+                    // Configuraciones de estilo
+                    ctx.beginPath();
+                    ctx.lineJoin = "bevel";
+
+                    // Dibujo del engranaje
+                    for (let i = 0; i <= numPuntos; i++) {
+                        const radio = (i % 2 === 0) ? radioExterno : radioInterno;
+                        const angulo = Math.PI * 2 / numPuntos * i;
+
+                        // Calcular las coordenadas del punto
+                        const x = centroX + radio * Math.sin(angulo);
+                        const y = centroY + radio * Math.cos(angulo);
+
+                        if (i === 0) {
+                            ctx.moveTo(x, y);
+                        } else {
+                            ctx.lineTo(x, y);
+                        }
+                    }
+                    
+                    ctx.closePath();
+                    ctx.lineWidth = 5;
+                    ctx.strokeStyle = "red";
+                    ctx.fillStyle = "orange";
+                    ctx.fill();
+                    ctx.stroke();
+                } else {
+                    alert("Este navegador no soporta la etiqueta canvas");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400"></canvas>
+</body>
+</html>

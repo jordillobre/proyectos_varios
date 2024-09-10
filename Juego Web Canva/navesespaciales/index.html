@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>CANVAS ! ROMPECABEZAS</title>
+    <title>CANVAS ! Space invaders</title>
     <style>
         body{
             width: 960px;
@@ -25,8 +25,12 @@
             teclaPulsada: null,
             tecla : [],
             colorBala : "red",
+            colorBala2 : "yellow",
             balas_array : new Array(),
+            balasEnemigos_array : new Array(),
             enemigos_array : new Array(),
+            disparo : false,
+            puntos : 0,
         }
 
         // Constantes referentes a las teclas para los controles del juego
@@ -47,7 +51,15 @@
                 game.ctx.save();
                 game.ctx.fillStyle = game.colorBala;
                 game.ctx.fillRect(this.x, this.y, this.w, this.w);
-                this.y=this.y-4;
+                this.y = this.y - 4;
+                game.ctx.restore();
+            };
+
+            this.disparar = function (){
+                game.ctx.save();
+                game.ctx.fillStyle = game.colorBala2;
+                game.ctx.fillRect(this.x, this.y, this.w, this.w);
+                this.y = this.y + 6;
                 game.ctx.restore();
             };
         }
@@ -55,23 +67,54 @@
         function Jugador (x){
             this.x = x;
             this.y = 450;
+            this.w = 30;
+            this.h = 15;
             this.dibujar = function (x){
                 this.x = x;
-                game.ctx.drawImage(game.imagen, this.x, this.y, 30 , 15);
+                game.ctx.drawImage(game.imagen, this.x, this.y, this.w , this.h);
             };
         }
 
-        function Enemigos(x, y){
+        function Enemigo(x, y){
             this.x = x;
             this.y = y;
-            this.w = w;
+            this.w = 35;
             this.veces = 0;
-            this. dx = 5;
+            this.dx = 5;
             this.ciclos = 0;
             this.num = 14;
             this.figura = true;
             this.vive = true;
-            this.dibujar = function (){};
+            this.dibujar = function (){
+
+                if(this.ciclos > 30){
+                    if (this.veces > this.num){ //hacemos que se muevan hacia abajo
+                        this.dx *= -1;
+                        this.veces = 0;
+                        this.num = 28;
+                        this.y += 20;
+                        this.dx = (this.dx>0)? this.dx++ : this.dx--;
+                    }else{
+                        this.x += this.dx;
+                    }
+
+                    this.veces++;
+                    this.ciclos = 0;
+                    this.figura = !this.figura;
+
+                }else{
+                    this.ciclos++;
+                }
+
+                if (this.figura){
+                    game.ctx.drawImage(game.imagenEnemigo, 0, 0, 40, 30, this.x, this.y, 35, 30);
+                    //los 4 primeros valores valores hacen referencia al frame de la imgen
+                }else{
+                    game.ctx.drawImage(game.imagenEnemigo, 50, 0, 35, 30, this.x, this.y, 35, 30);
+                }
+
+                
+            };
         }
 
         //funciones para cargar la caratula
@@ -98,12 +141,51 @@
             animar();
         };
 
-        var x = 100, y = 100;
+        // var x = 100, y = 100;
 
         const animar = () =>{
             requestAnimationFrame(animar);
             verificar();
             pintar();
+            colisiones();
+        }
+
+        const colisiones = () =>{
+            let enemigo, bala;
+
+            //balas del jugador contra enemigos
+            for(var i = 0; i < game.enemigos_array.length; i++){
+                for(var j = 0; j < game.balas_array.length; j++){
+                    enemigo = game.enemigos_array[i];
+                    bala = game.balas_array[j];
+
+                    if(enemigo != null && bala!= null){
+                        if((bala.x > enemigo.x) && (bala.x < enemigo.x + enemigo.w) && 
+                        (bala.y > enemigo.y) && (bala.y < enemigo.y + enemigo.w)){
+                            enemigo.vive = false;
+                            game.enemigos_array[i] = null;
+                            game.balas_array[j] = null;
+                            game.disparo = false;
+                            game.puntos += 10;
+                        }
+                    }
+                }
+            }
+
+            //balas enemigas contra el jugador
+            for (var j = 0; j < game.balasEnemigos_array.length; j++){
+                bala = game.balasEnemigos_array[j];
+                if(bala != null){
+                    if  ((bala.x > game.jugador.x) && (bala.x < game.jugador.x + game.jugador.w) && 
+                        (bala.y > game.jugador.y) && (bala.y < game.jugador.y + game.jugador.h)){
+                        gameOver();
+                    }
+                }
+            }
+        }
+
+        const gameOver = () =>{
+            console.log("Fin del juego");
         }
 
         const verificar = ()=>{
@@ -114,30 +196,82 @@
             if(game.x > game.canvas.width - 40) game.x = game.canvas.width - 40;
             if(game.x < 10) game.x = 10;
 
-            //disparar
+            //disparar jugador
             if(game.tecla[BARRA]){
-                game.balas_array.push(new Bala(game.jugador.x + 12 , game.jugador.y-3 , 5));
-                game.tecla[BARRA] = false;
+
+                if(game.disparo == false){
+                    game.balas_array.push(new Bala(game.jugador.x + 12 , game.jugador.y-3 , 5));
+                    game.tecla[BARRA] = false;
+                    game.disparo = true;
+                }else{
+
+                }
+            }
+
+            //diaprar enemigo
+            if (Math.random() > 0.96){
+                dispararEnemigo();
             }
 
         }
 
+        const dispararEnemigo = () =>{
+            var ultimos = new Array();
+            for (var i = game.enemigos_array.length - 1; i > 0  ; i--){
+                if (game.enemigos_array[i] != null){
+                    ultimos.push(i);
+                }
+                if(ultimos.length == 10) break;
+            }
+
+            d = ultimos[Math.floor(Math.random() * 10)];
+
+            game.balasEnemigos_array.push(new Bala(game.enemigos_array[d].x + game.enemigos_array[d].w / 2, game.enemigos_array[d].y, 5));        }
+
         const pintar = () =>{
             game.ctx.clearRect(0,0, game.canvas.width, game.canvas.height); //limpiara el contenido del canvas
+
+            score();
+
             game.jugador.dibujar(game.x);
 
             //crear y mover las balas de jugador
             for (var i = 0; i<game.balas_array.length; i++){
                 if(game.balas_array[i] != null){
                     game.balas_array[i].dibujar();
-                    if (game.balas_array[i].y < 0) game.balas_array[i] = null;
+                    if (game.balas_array[i].y < 0){
+                        game.disparo = false;
+                        game.balas_array[i] = null;
+                    } 
                 }
+            }
+
+            //creación balas enemigas
+            for (var i = 0; i < game.balasEnemigos_array.length; i++){
+                if(game.balasEnemigos_array[i] != null){
+                    game.balasEnemigos_array[i].disparar();
+                    if(game.balasEnemigos_array[i].y > game.canvas.height){
+                        game.balasEnemigos_array[i] = null;
+                    }
+                }
+            }   
+
+            //pintar enemigos
+            for(var i = 0; i < game.enemigos_array.length; i++){
+                if (game.enemigos_array[i] != null){
+                    game.enemigos_array[i].dibujar();
+                }
+                
             }
         }
 
-        
-
-
+        const score = () =>{
+            game.ctx.save();
+            game.ctx.fillStyle = "white";
+            game.ctx.font = "bold 20px Courier";
+            game.ctx.fillText("SCORE: " + game.puntos, 10, 20);
+            game.ctx.restore();
+        }
 
         document.addEventListener("keydown", function(e){
             game.teclaPulsada=e.keyCode;
@@ -165,6 +299,18 @@
                 if (game.ctx){
                     game.imagen = new Image();
                     game.imagen.src = "imagenes/torre.fw.png";
+
+                    //creación de enemigos
+                    game.imagenEnemigo = new Image();
+                    game.imagenEnemigo.src = "imagenes/invader.fw.png";
+                    game.imagenEnemigo.onload = function(){
+                        for(var i = 0; i < 5; i++){
+                            for(var j = 0; j < 10; j++){
+                                game.enemigos_array.push(new Enemigo(100 + 40 *j, 30 + 45 * i));
+                            }
+                        }
+                    }
+
                     caratula();
                     game.canvas.addEventListener("click", seleccionar, false);
                     
@@ -176,7 +322,7 @@
     </script>
 </head>
 <body>
-    <h1>Rompecabezas</h1>
+    <h1>Space invaders</h1>
     <canvas id = "canvas" width="960" height="500">Tu navegador no soporta el uso de CANVAS</canvas>
 </body>
 </html>

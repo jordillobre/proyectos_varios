@@ -1,3 +1,4 @@
+¿Donde seria mejor poner la parte del codigo para que suene el sonido de la intro?
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +32,11 @@
             enemigos_array : new Array(),
             disparo : false,
             puntos : 0,
+            finJuego : false,
+            boing : null,
+            disparoJugador : null,
+            intro : null,
+            fin : null,
         }
 
         // Constantes referentes a las teclas para los controles del juego
@@ -122,12 +128,13 @@
             let imagen = new Image();
             imagen.src = "imagenes/cara.webp";
             imagen.onload = () =>{
-                game.ctx.drawImage(imagen, 0, 0);
+                                game.ctx.drawImage(imagen, 0, 0);
             }
         }
 
         const seleccionar = (e) =>{
             if (game.caratula){
+                game.intro.play();
                 inicio();
             }
         }
@@ -144,10 +151,13 @@
         // var x = 100, y = 100;
 
         const animar = () =>{
-            requestAnimationFrame(animar);
-            verificar();
-            pintar();
-            colisiones();
+            if (game.finJuego == false){
+                requestAnimationFrame(animar);
+                verificar();
+                pintar();
+                colisiones();
+            }
+            
         }
 
         const colisiones = () =>{
@@ -167,6 +177,7 @@
                             game.balas_array[j] = null;
                             game.disparo = false;
                             game.puntos += 10;
+                            game.boing.play();
                         }
                     }
                 }
@@ -185,7 +196,34 @@
         }
 
         const gameOver = () =>{
-            console.log("Fin del juego");
+            game.ctx.clearRect(0, 0, game.canvas.width, game.canvas.height);
+            game.balas_array = [];
+            game.balasEnemigos_array = [];
+            game.enemigos_array = []
+            game.finJuego = true;
+            game-fin.play();
+            mensaje("Game over", 100, 60);
+            mensaje("Lograste obtener: " + game.puntos + " puntos", 220);
+
+            if (game.puntos > 100 || game.puntos <= 200){
+                mensaje("Casi lo logras", 340);
+            }else if (game.puntos > 200){
+                mensaje("Felicidades", 340);
+            }else{
+                mensaje("Lo siento", 340);
+            }
+        }
+
+        const mensaje = (cadena, y , tamano = 40) =>{
+            let medio = game.canvas.width / 2;
+            game.ctx.save();
+            game.ctx.fillStyle = "green";
+            game.ctx.strokeStyle = "blue";
+            game.ctx.textBaseline = "top";
+            game.ctx.font = "bold " + tamano + "px Courier";
+            game.ctx.textAlign = "center";
+            game.ctx.fillText(cadena, medio, y);
+            game.ctx.restore();
         }
 
         const verificar = ()=>{
@@ -203,6 +241,7 @@
                     game.balas_array.push(new Bala(game.jugador.x + 12 , game.jugador.y-3 , 5));
                     game.tecla[BARRA] = false;
                     game.disparo = true;
+                    game.disparoJugador.play();
                 }else{
 
                 }
@@ -297,6 +336,14 @@
             if (game.canvas && game.canvas.getContext){
                 game.ctx = canvas.getContext("2d");
                 if (game.ctx){
+
+                    //sonidos
+                    game.boing = document.getElementById("boing");
+                    game.disparoJugador = document.getElementById("disparo");
+                    game.intro = document.getElementById("intro");
+                    game.fin = document.getElementById("fin");
+
+                    //cargar imagen jugador
                     game.imagen = new Image();
                     game.imagen.src = "imagenes/torre.fw.png";
 
@@ -324,5 +371,24 @@
 <body>
     <h1>Space invaders</h1>
     <canvas id = "canvas" width="960" height="500">Tu navegador no soporta el uso de CANVAS</canvas>
+
+    <!-- importar sonidos -->
+    <audio id="boing">
+        <source src="sonidos/boing.mp3">
+        <source src="sonidos/boing.ogg">
+    </audio>
+    <audio id="disparo">
+        <source src="sonidos/disparo.mp3">
+        <source src="sonidos/disparo.ogg">
+    </audio>
+    <audio id="intro">
+        <source src="sonidos/intro.mp3">
+        <source src="sonidos/intro.ogg">
+    </audio>
+    <audio id="fin">
+        <source src="sonidos/gameOver.mp3">
+        <source src="sonidos/gameOver.ogg">
+    </audio>
+
 </body>
 </html>
